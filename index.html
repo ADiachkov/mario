@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Рушникосушарки Маріо з нержавіючої сталі</title>
+
+    <link rel="stylesheet" href="font/stylesheet.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FA8100',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<body>
+<style>
+    body {
+        font-family: Gilroy, sans-serif;
+        font-weight: 300;
+        color: #1E1E1E
+    }
+
+    strong, b {
+        font-weight: 700
+    }
+
+    .container {
+        max-width: 1276px !important
+    }
+
+    .big-container {
+        max-width: 1720px;
+    }
+
+    #main-bg {
+        background: url(images/bg.png) no-repeat center center;
+        background-size: cover;
+        height: 720px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    .grid-block1 {
+        grid-area: 1 / 1 / 3 / 2;
+        height: 500px;
+    }
+
+    .grid-block2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .grid-block3 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .grid-block {
+        background: linear-gradient(#DDDFE0, #ECECEC)
+    }
+
+    #second-bg {
+        background-image: linear-gradient(to right, rgb(232, 232, 232), #FAFAFA), url(images/second-bg.png);
+        background-repeat: no-repeat;
+        background-position: left center, right center;
+        background-size: 50% auto, 100% auto;
+    }
+
+    .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+        top: 26px;
+        width: calc(100% - 220px);
+    }
+
+    .partner-card {
+        width: 142px;
+        height: 75px;
+    }
+
+    footer {
+        background: #121013;
+    }
+
+    .menu-link {
+        position: relative;
+    }
+
+    .menu-link::before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        background: white;
+    }
+</style>
+<header class="container mx-auto px-4 lg:px-0 py-5 flex items-center justify-between">
+    <div class="flex items-center">
+        <a href="/" class="py-2 px-4 hover:text-primary transition">Головна</a>
+        <a href="/" class="py-2 px-4 hover:text-primary transition">Продукція</a>
+        <a href="/" class="py-2 px-4 hover:text-primary transition">Про компанію</a>
+        <a href="/" class="py-2 px-4 hover:text-primary transition">FAQ</a>
+    </div>
+    <a href="/">
+        <img src="images/logo.svg" class="w-44" alt="">
+    </a>
+    <div class="flex items-center">
+        <a href="/" class="py-2 px-4 hover:text-primary transition">Переваги </a>
+        <a href="/" class="py-2 px-4 hover:text-primary transition">Блог</a>
+        <a href="/" class="py-2 px-4 hover:text-primary transition">Де прибрати?</a>
+        <a href="/" class="py-2 px-4 hover:text-primary transition">Контакти</a>
+    </div>
+</header>
+<div class="big-container mx-auto px-4 lg:px-0">
+    <div id="main-bg" class="w-full relative" style="">
+        <div class="absolute top-0 left-0 w-full h-full z-10" style="background: rgba(0,0,0,0.4)"></div>
+        <div class="relative z-20">
+            <p class="text-white text-center font-bold text-3xl lg:text-6xl pt-44">
+                Рушникосушарки Маріо <br>
+                <span class="font-extralight">з нержавіючої сталі</span>
+            </p>
+            <a href="#"
+               class="mt-20 w-fit block mx-auto border border-white hover:text-primary transition hover:border-primary px-16 py-5 text-white font-bold text-xl">
+                Наша продукція
+            </a>
+            <img src="images/arrow-down.png" class="mx-auto mt-16" alt="">
+        </div>
+        <div class="container mx-auto px-4 lg:px-0 bg-white relative z-20 flex items-center py-12"
+             style="bottom: -60px">
+            <div class="w-1/5">
+                <div class="w-24 h-24 border-4 border-gray-200 flex items-center justify-center mx-auto relative">
+                    <div class="absolute top-0 w-5 h-12 bg-white z-20" style="left: -4px"></div>
+                    <img src="images/icon1.svg" alt="">
+                </div>
+                <p class="text-center mt-6">
+                    Якість перевірена часом
+                </p>
+            </div>
+            <div class="w-1/5">
+                <div class="w-24 h-24 border-4 border-gray-200 flex items-center justify-center mx-auto relative">
+                    <div class="absolute bottom-0 w-5 h-12 bg-white z-20" style="right: -4px"></div>
+                    <img src="images/icon2.svg" alt="">
+                </div>
+                <p class="text-center mt-6">
+                    Широкий асортимент
+                </p>
+            </div>
+            <div class="w-1/5">
+                <div class="w-24 h-24 border-4 border-gray-200 flex items-center justify-center mx-auto relative">
+                    <div class="absolute bottom-0 w-5 h-12 bg-white z-20" style="left: -4px"></div>
+                    <img src="images/icon3.svg" alt="">
+                </div>
+                <p class="text-center mt-6">
+                    Гарантія до 50 років
+                </p>
+            </div>
+            <div class="w-1/5">
+                <div class="w-24 h-24 border-4 border-gray-200 flex items-center justify-center mx-auto relative">
+                    <div class="absolute top-0 w-5 h-12 bg-white z-20" style="right: -4px"></div>
+                    <img src="images/icon4.svg" alt="">
+                </div>
+                <p class="text-center mt-6">
+                    Екологічне виробництво
+                </p>
+            </div>
+            <div class="w-1/5">
+                <div class="w-24 h-24 border-4 border-gray-200 flex items-center justify-center mx-auto relative">
+                    <div class="absolute bottom-0 w-12 h-5 bg-white z-20" style="left: -4px; bottom: -4px"></div>
+                    <img src="images/icon5.svg" alt="">
+                </div>
+                <p class="text-center mt-6">
+                    Безпека користування
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mx-auto px-4 lg:px-0 py-12 mt-48">
+    <div class="grid-container">
+        <a href="#" class="grid-block grid-block1 relative flex justify-end p-8">
+            <img src="images/cat1.png" class="absolute top-0 left-0 h-full" alt="">
+            <div class="flex flex-col justify-end items-start">
+                <p class="text-2xl lg:text-3xl">
+                    <strong>Електричні</strong> <br>
+                    рушникосушарки
+                </p>
+                <img src="images/icons1.svg" class="h-6 mt-8" alt="">
+                <div class="w-full flex justify-end mt-32">
+                    <img src="images/tab.svg" class="w-12" alt="">
+                </div>
+            </div>
+        </a>
+        <a href="#" class="grid-block grid-block2 relative flex justify-end pl-5 pb-5">
+            <div class="absolute top-0 left-0 pb-5 pl-5 h-full">
+                <img src="images/cat2.png" class="h-full" alt="">
+            </div>
+            <div class="pr-5 pt-8 flex flex-col justify-end items-start">
+                <p class="text-2xl lg:text-3xl">
+                    <strong>Водяні</strong> <br>
+                    рушникосушарки
+                </p>
+                <img src="images/icons2.svg" class="h-6 mt-2" alt="">
+                <div class="w-full flex justify-end mt-3">
+                    <img src="images/tab.svg" class="w-12" alt="">
+                </div>
+            </div>
+        </a>
+        <a href="#" class="grid-block grid-block3 relative flex justify-end pl-5 pb-5">
+            <div class="absolute top-0 left-0 pt-7 pl-6 h-full">
+                <img src="images/cat3.png" class="h-full" alt="">
+            </div>
+            <div class="pr-5 pt-8 flex flex-col justify-end items-start">
+                <p class="text-2xl lg:text-3xl">
+                    <strong>Аксесуари до</strong> <br>
+                    рушникосушарки
+                </p>
+                <img src="images/icons3.svg" class="h-6 mt-2" alt="">
+                <div class="w-full flex justify-end mt-3">
+                    <img src="images/tab.svg" class="w-12" alt="">
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="container mx-auto px-4 lg:px-0 py-12 flex justify-between relative">
+    <div class="w-full lg:w-7/12 lg:pr-4 pt-32">
+        <h2 class="text-3xl lg:text-4xl font-light">
+            <strong>Продукція Маріо відповідає</strong> українським та європейським стандартам якості
+        </h2>
+        <p class="mt-8">
+            <strong>Сьогодні підприємство «Маріо»</strong> має точне спеціалізоване обладнання,  кваліфікований
+            персонал та високий рівень контролю на виробництві. Якість наших рушникосушарок підтверджено
+            українськими та європейськими сертифікатами.
+        </p>
+        <div class="mt-24 flex items-start justify-between absolute bottom-24 lg:w-3/4">
+            <div class="px-6 w-1/4">
+                <img src="images/ROHS.svg" class="mx-auto" alt="">
+                <p class="mt-6 text-center">
+                    Сертифікат обмеження небезпечних речовин
+                </p>
+            </div>
+            <div class="px-6 w-1/4">
+                <img src="images/EMC.svg" class="mx-auto" alt="">
+                <p class="mt-6 text-center">
+                    Сертифікат електромагнітної сумісності
+                </p>
+            </div>
+            <div class="px-6 w-1/4">
+                <img src="images/LVD.svg" class="mx-auto" alt="">
+                <p class="mt-6 text-center">
+                    Сертифікат низької напруги
+                </p>
+            </div>
+            <div class="px-6 w-1/4">
+                <img src="images/IP44.svg" class="mx-auto" alt="">
+                <p class="mt-6 text-center">
+                    Сертифікат ступення захисту
+                </p>
+            </div>
+        </div>
+    </div>
+    <img src="images/cat4.png" class="lg:w-5/12" alt="">
+</div>
+<div class="container mx-auto px-4 lg:px-0 py-12 flex items-center">
+    <div class="w-full lg:w-1/2 lg:pr-24">
+        <h3 class="text-2xl lg:text-3xl">
+            <strong>Ми є новаторами в розробці</strong> сучасних електричних рушникосушарок
+        </h3>
+    </div>
+    <div class="w-full lg:w-1/2">
+        <p>
+            Компанія Маріо завжди на першій лінії сучасних розробок. Так у 2020 році ми запустили високоекономічні
+            рушникосушки з таймером-регулятором.
+        </p>
+        <a href="#"
+           class="mt-5 w-fit block border border-black hover:text-primary transition hover:border-primary px-12 py-3 font-bold text-lg">
+            Більше про електричні
+        </a>
+    </div>
+</div>
+<div class="big-container mx-auto px-4 lg:px-0 py-12">
+    <div id="second-bg" class="w-full relative">
+        <div class="container mx-auto py-24">
+            <h4 class="text-2xl lg:text-3xl lg:w-7/12">
+                <strong>Наша місія</strong> - виробляти високоякісні рушникосушарки для комфортного життя кожної родини,
+                створюючи тепло та затишок
+            </h4>
+            <div class="mt-12 lg:w-1/2">
+                Ми раді зробити свій внесок у розвиток галузі, залишаючись при цьому великою командою та родиною!
+                <div class="mt-2">© колектив Маріо</div>
+            </div>
+            <div class="lg:w-2/3 mt-12 flex items-start">
+                <div class="w-1/4 px-4">
+                    <p class="text-center text-4xl lg:text-6xl font-extralight">
+                        19
+                    </p>
+                    <p class="text-center mt-4">
+                        країн експортується продукція Маріо
+                    </p>
+                </div>
+                <div class="w-1/4 px-4">
+                    <p class="text-center text-4xl lg:text-6xl font-extralight">
+                        900
+                    </p>
+                    <p class="text-center mt-4">
+                        магазинів по Україні
+                    </p>
+                </div>
+                <div class="w-1/4 px-4">
+                    <p class="text-center text-4xl lg:text-6xl font-extralight">
+                        80
+                    </p>
+                    <p class="text-center mt-4">
+                        моделей ассортименту
+                    </p>
+                </div>
+                <div class="w-1/4 px-4">
+                    <p class="text-center text-4xl lg:text-6xl font-extralight">
+                        300
+                    </p>
+                    <p class="text-center mt-4">
+                        типорозмірів рушникосушарок
+                    </p>
+                </div>
+            </div>
+            <a href="#"
+               class="mt-12 w-fit block border border-black hover:text-primary transition hover:border-primary px-12 py-3 font-bold text-lg">
+                Розпочати співпрацю
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container mx-auto px-4 lg:px-0 py-12">
+    <p class="text-3xl lg:text-4xl">
+        <strong>Наші</strong> товари
+    </p>
+    <div class="w-full mt-12 swiper productsSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="w-full border-[3px] border-[#FAFAFA] px-12 py-6">
+                        <img src="images/product.png" class="w-full" alt="">
+                    </div>
+                    <p class="mt-2 text-center">
+                        Hotel-TR K
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="flex items-center justify-end relative mt-12">
+            <div class="swiper-scrollbar swiper-scrollbar-products"></div>
+            <a href="#"
+               class="w-fit block border border-black hover:text-primary transition hover:border-primary px-12 py-3 font-bold text-lg ml-5">
+                Усі товари
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container mx-auto px-4 lg:px-0 py-12">
+    <h5 class="text-center text-3xl lg:text-4xl">
+        <strong>Зроби ванну кімнату</strong> зоною свого комфорту
+    </h5>
+    <div class="mt-24 flex items-center">
+        <img src="images/why-img.png" class="lg:w-1/2" alt="">
+        <div class="lg:w-1/2 lg:pl-8">
+            <p class="text-2xl lg:text-3xl">
+                <strong>Рушникосушки українського бренду Mario:</strong> максимальний комфорт у ванній кімнаті
+            </p>
+            <p class="mt-8">
+                <strong>Рушникосушки з нержавіючої сталі</strong> є важливим елементом ванної кімнати, оскільки
+                дозволяють зберігати
+                рушники сухими й теплими, а також забезпечують комфорт і затишок в приміщенні. Використовувати варто
+                пристрої із високоякісних матеріалів, оскільки вони будуть служити вам не один рік. Тому радимо звернути
+                увагу на нашу продукцію. <strong>Ми є одним з перших українських виробників</strong> сушок для рушників
+                з нержавіючої
+                сталі. Вже практично <strong>25 років працюємо</strong> на рынку сантехніки й заслужили на довіру
+                клієнтів з усієї
+                України.
+            </p>
+            <p class="mt-8 lg:text-2xl">
+                <strong>Чому варто купити</strong> рушникосушки Mario
+            </p>
+            <ul class="mt-4 list-decimal font-bold pl-6">
+                <li>
+                    Висока якість. <span class="font-light">Сушка для рушників від українського виробника Mario – це якісне та надійне обладнання
+                    для сушіння рушників у ванній кімнаті. Вони виконані з високоякісних матеріалів, що гарантує їхню
+                    довговічність та надійність.</span>
+                </li>
+                <li class="mt-3">
+                    Широкий асортимент. <span class="font-light">Рушникосушки від Mario представлені в різних варіантах виконання, щоб кожен міг
+                    вибрати відповідний варіант під свій інтер’єр. Їхній дизайн сучасний і елегантний, що дозволяє сушці
+                    для рушників стати не тільки функціональним, але і декоративним елементом ванної кімнати.</span>
+                </li>
+                <li class="mt-3">
+                    Сучасні технології. <span class="font-light">Крім того, сушка для рушників у ванну оснащена інноваційною системою нагрівання,
+                    яка дозволяє швидко та рівномірно сушити рушники, не пошкоджуючи їхню структуру. Вони є
+                    енергоощадними, що допомагає знизити витрати на електроенергію.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="background: #FAFAFA">
+    <div class="container mx-auto px-4 lg:px-0 py-24 mt-12 flex items-center justify-between">
+        <div class="partner-card border border-[#E2E2E2] flex items-center justify-center">
+            <img src="images/partner1.svg" alt="">
+        </div>
+        <div class="partner-card border border-[#E2E2E2] flex items-center justify-center">
+            <img src="images/partner2.svg" alt="">
+        </div>
+        <div class="partner-card border border-[#E2E2E2] flex items-center justify-center">
+            <img src="images/partner3.svg" alt="">
+        </div>
+        <div class="partner-card border border-[#E2E2E2] flex items-center justify-center">
+            <img src="images/partner4.svg" alt="">
+        </div>
+        <div class="partner-card border border-[#E2E2E2] flex items-center justify-center">
+            <img src="images/partner5.svg" alt="">
+        </div>
+        <div class="partner-card border border-[#E2E2E2] flex items-center justify-center">
+            <img src="images/partner6.svg" alt="">
+        </div>
+        <div class="partner-card border border-[#E2E2E2] flex items-center justify-center">
+            <img src="images/partner7.svg" alt="">
+        </div>
+        <div class="partner-card border border-[#E2E2E2] flex items-center justify-center">
+            <img src="images/partner8.svg" alt="">
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container mx-auto px-4 lg:px-0 py-12 text-white">
+        <div class="flex items-start justify-between">
+            <a href="/">
+                <img src="images/logo2.svg" alt="">
+            </a>
+            <div>
+                <p class="text-lg font-bold">
+                    Продукція
+                </p>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Водяні
+                </a>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Електричні
+                </a>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Аксесуари
+                </a>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Де придбати?
+                </a>
+            </div>
+            <div>
+                <p class="text-lg font-bold">
+                    Для партнерів
+                </p>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Про нас
+                </a>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Співпраця
+                </a>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Гарантія
+                </a>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Підтримка
+                </a>
+            </div>
+            <div>
+                <p class="text-lg font-bold">
+                    Інформація
+                </p>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Переваги рушникосушарок
+                </a>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Запитання та відповіді
+                </a>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Завантажити матеріали
+                </a>
+                <a href="#" class="mt-3 pl-4 block menu-link hover:text-primary transition">
+                    Контроль РРЦ
+                </a>
+            </div>
+            <div class="max-w-xs">
+                <p class="text-lg font-bold">
+                    Контакти
+                </p>
+                <a href="#" class="mt-3 flex items-center hover:text-primary transition">
+                    <img src="images/call-receive.svg" class="mr-3" alt="">
+                    +38 (067) 346-35-35
+                </a>
+                <a href="#" class="mt-3 flex items-center hover:text-primary transition">
+                    <img src="images/mail.svg" class="mr-3" alt="">
+                    info@mario.ua
+
+                </a>
+                <a href="#" class="mt-3 flex items-start hover:text-primary transition">
+                    <img src="images/map-tag.svg" class="mr-3" alt="">
+                    Вінницька обл., Україна, 22300 Сосонське шосе, 4-В смт. Літин
+                </a>
+            </div>
+        </div>
+        <div class="mt-6 w-full border-t border-gray-600 py-5 flex items-center justify-between">
+            <p>
+                © Mario 1998-2024. Всі права захищені.
+            </p>
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <a href="#" class="mr-12 hover:text-primary transition hover:border-primary">
+                        Обробка персональних даних
+                    </a>
+                    <a href="#" class="mr-12 hover:text-primary transition hover:border-primary">
+                        Політика конфеденційності
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <a href="#" class="mr-4">
+                        <img src="images/inst.svg" alt="">
+                    </a>
+                    <a href="#" class="mr-4">
+                        <img src="images/fb.svg" alt="">
+                    </a>
+                    <a href="#" class="mr-4">
+                        <img src="images/yt.svg" alt="">
+                    </a>
+                    <a href="#" class="">
+                        <img src="images/tg.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mainSwiper", {
+        direction: "vertical",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    var productsSwiper = new Swiper(".productsSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        scrollbar: {
+            el: ".swiper-scrollbar-products",
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
+
+</body>
+</html>
