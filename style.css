@@ -12,13 +12,16 @@ strong, b {
     max-width: 1276px !important
 }
 
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
 .big-container {
     max-width: 1720px;
 }
 
 #main-bg {
-    background: url(images/bg.png) no-repeat center center;
-    background-size: cover;
     height: 720px;
 }
 
@@ -84,21 +87,60 @@ footer {
 }
 
 #main-bg .container {
-    bottom: -60px
+    bottom: 120px
 }
 
 #cat1 {
     left: 0
 }
 
+.swiper-pagination-main {
+    right: auto !important;
+    left: 60px !important;
+}
+
+.swiper-pagination-main .swiper-pagination-bullet{
+    width: 19px;
+    height: 19px;
+    border: 1px solid white;
+    background: transparent;
+    border-radius: 0;
+    margin: 10px 0 !important;
+    position: relative;
+}
+
+.swiper-pagination-main .swiper-pagination-bullet-active:before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    top: 5px;
+    left: 5px;
+    background: white;
+}
+.swiper-pagination-main .swiper-pagination-bullet-active:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    top: 8px;
+    left: 5px;
+    background: white;
+}
+
 @media (max-width: 1024px) {
+    .swiper-pagination-main {
+        right: auto !important;
+        left: 12px !important;
+    }
+
     #main-bg .container {
-        bottom: -120px;
+        bottom: 120px;
         width: 95%;
     }
 
     #main-bg {
-        height: auto
+        height: 550px
     }
 
     .grid-block1 {
@@ -143,7 +185,7 @@ footer {
 
     #main-bg .container {
         width: 95%;
-        bottom: -220px
+        bottom: 200px
     }
 
     .grid-block1 {
