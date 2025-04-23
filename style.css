@@ -99,7 +99,7 @@ footer {
     left: 60px !important;
 }
 
-.swiper-pagination-main .swiper-pagination-bullet{
+.swiper-pagination-main .swiper-pagination-bullet {
     width: 19px;
     height: 19px;
     border: 1px solid white;
@@ -118,6 +118,7 @@ footer {
     left: 5px;
     background: white;
 }
+
 .swiper-pagination-main .swiper-pagination-bullet-active:after {
     content: '';
     position: absolute;
@@ -126,6 +127,26 @@ footer {
     top: 8px;
     left: 5px;
     background: white;
+}
+
+#sertificates {
+    bottom: 6rem;
+}
+
+#sertificates-block {
+    padding-top: 8rem;
+}
+
+@media (max-width: 1200px) {
+    #sertificates {
+        bottom: 0;
+    }
+
+
+    #sertificates-block {
+        padding-top: 4rem;
+    }
+
 }
 
 @media (max-width: 1024px) {
